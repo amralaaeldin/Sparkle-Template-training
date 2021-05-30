@@ -958,7 +958,6 @@ also thought about box shadow
   position: relative;
   display: block;
   width: calc(100% / 6);
-  min-height: 283.69px;
 }
 
 @media (max-width: 1199px) {
@@ -977,7 +976,12 @@ also thought about box shadow
   height: 100%;
   display: block;
 }
-
+@media (max-width: 391px) {
+  .portfolio .container-fluid .imgs {
+    position: relative;
+    width: calc(100%);
+  }
+}
 
 .portfolio .container-fluid .imgs .yellow {
   background-color: var(--main-color);
@@ -1013,7 +1017,6 @@ also thought about box shadow
   -o-transition: 0.3s;
   opacity: 0;
 }
-
 
 .portfolio .container-fluid .imgs .img-info span {
   width: 100%;
