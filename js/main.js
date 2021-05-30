@@ -1,16 +1,16 @@
 /* top on reload */
-/* history.scrollRestoration = 'manual';
+history.scrollRestoration = "manual";
 if (history.scrollRestoration) {
-  history.scrollRestoration = 'manual';
+  history.scrollRestoration = "manual";
 } else {
   window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-  }
-} */
+    window.scrollTo(0, 0);
+  };
+}
 
-window.onbeforeunload = function () {
+/* window.onbeforeunload = function () {
   window.scrollTo(0, 0);
-};
+}; */
 
 /* nav bar exchange */
 window.addEventListener("scroll", function () {
