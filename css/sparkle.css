@@ -1454,6 +1454,12 @@ also thought about box shadow
   }
 }
 
+@media (max-width: 551px) {
+  .about .container.quote .cont .text1 {
+    padding: 10px;
+  }
+}
+
 @media (max-width: 539px) {
   .about .container.quote .cont .img img {
     width: 100%;
