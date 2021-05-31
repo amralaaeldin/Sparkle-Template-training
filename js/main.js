@@ -8,10 +8,6 @@ if (history.scrollRestoration) {
   };
 }
 
-/* window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}; */
-
 /* nav bar exchange */
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
@@ -24,13 +20,42 @@ window.addEventListener("scroll", function () {
 });
 
 /* static toggle list */
-document
-  .querySelector("header .container nav .icon")
-  .addEventListener("click", function () {
-    this.classList.toggle("open");
-    document.getElementById("box").classList.toggle("flex");
+const mediaQuery = window.matchMedia("(max-width: 767.9px)");
+const icon = document.querySelector("header .container nav .icon");
+const cont = document.querySelector("header .container nav .icon .cont");
+const span = document.querySelector("header .container nav .icon .cont span");
+const box = document.querySelector("#box");
+
+/* close when click outside */
+if (mediaQuery.matches) {
+  window.addEventListener("mouseup", function (event) {
+    if (event.target != box && event.target != icon) {
+      icon.classList.remove("open");
+      box.classList.remove("flex");
+    }
   });
-/* close when click outside ?? */
+}
+
+let clickNums = 0;
+icon.addEventListener("click", function (event) {
+  if (
+    event.target == icon ||
+    event.target == cont ||
+    event.target.parentNode == cont ||
+    event.target == span ||
+    event.target.parentNode == span
+  ) {
+    clickNums += 1;
+  }
+  if (clickNums % 2 == 0) {
+    icon.classList.remove("open");
+    box.classList.remove("flex");
+  } else {
+    icon.classList.add("open");
+    box.classList.add("flex");
+  }
+});
+
 /* window.onload = function () {
   const box = document.getElementById("box");
   document.onclick = function (e) {
@@ -41,14 +66,7 @@ document
   };
 }; */
 
-/* const box = document.querySelector("#box");
-box.addEventListener("click", function (event) {
-  if (event.target.closest("#box")) {
-    return box.classList.add("hidden");
-  }
-}); */
-
-/* same animation when close ?? */
+/* same animation when close ?? >> opacity not none nor hidden */
 
 /* select from gallery */
 const img1 = document.querySelector(".img1"),
