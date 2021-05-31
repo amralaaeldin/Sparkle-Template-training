@@ -1235,7 +1235,7 @@ also thought about box shadow
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/images/axes-light.svg");
+  background-image: url("../images/axes-light.svg");
   background-repeat: no-repeat;
   background-position: center;
   font-weight: 400;
