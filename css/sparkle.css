@@ -990,6 +990,7 @@ also thought about box shadow
   .portfolio .container-fluid .imgs {
     position: relative;
     width: calc(100%);
+    margin-bottom: 10px;
   }
 }
 
