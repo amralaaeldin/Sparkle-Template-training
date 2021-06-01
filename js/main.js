@@ -21,50 +21,25 @@ window.addEventListener("scroll", function () {
 
 /* static toggle list */
 const mediaQuery = window.matchMedia("(max-width: 767.9px)");
-const icon = document.querySelector("header .container nav .icon");
+const burger = document.querySelector("#burger");
 const cont = document.querySelector("header .container nav .icon .cont");
 const span = document.querySelector("header .container nav .icon .cont span");
 const box = document.querySelector("#box");
+const header = document.querySelector("header");
 
 /* close when click outside */
 if (mediaQuery.matches) {
-  window.addEventListener("mouseup", function (event) {
-    if (event.target != box && event.target != icon) {
-      icon.classList.remove("open");
-      box.classList.remove("flex");
-    }
-  });
-}
-
-let clickNums = 0;
-icon.addEventListener("click", function (event) {
-  if (
-    event.target == icon ||
-    event.target == cont ||
-    event.target.parentNode == cont ||
-    event.target == span ||
-    event.target.parentNode == span
-  ) {
-    clickNums += 1;
-  }
-  if (clickNums % 2 == 0) {
-    icon.classList.remove("open");
-    box.classList.remove("flex");
-  } else {
-    icon.classList.add("open");
-    box.classList.add("flex");
-  }
-});
-
-/* window.onload = function () {
-  const box = document.getElementById("box");
   document.onclick = function (e) {
-    if (e.target.id !== "box") {
-      box.style.display = "none";
-      console.log("i did");
+    if (e.target.id !== "box" && e.target.id !== "burger") {
+      document.getElementById("burger").classList.remove("active");
+      document.getElementById("box").classList.remove("active");
     }
   };
-}; */
+  document.getElementById("burger").onclick = function () {
+    document.getElementById("burger").classList.toggle("active");
+    document.getElementById("box").classList.toggle("active");
+  };
+}
 
 /* same animation when close ?? >> opacity not none nor hidden */
 
