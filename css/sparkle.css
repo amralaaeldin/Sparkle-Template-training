@@ -1473,4 +1473,213 @@ header .container nav .icon.active span:nth-child(2) {
 }
 /* end about */
 /* start footer */
+
+footer {
+  padding: 60px 20px;
+  background-color: var(--secondry-color);
+}
+footer .container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 155px 95px 1fr;
+}
+
+footer .container .intro {
+  padding: 40px 10px;
+  padding-left: 0;
+}
+footer .container .intro .logo {
+  margin-bottom: 30px;
+}
+footer .container .intro p {
+  color: #bababa;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+footer .container .intro p:first-of-type {
+  width: 375px;
+}
+
+footer .container .intro p:nth-of-type(2) span {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+footer .container .links {
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+footer .container .links h3 {
+  color: #bababa;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+footer .container .links ul.cont {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .links ul.cont li {
+  height: 30px;
+}
+footer .container .links ul.cont li a {
+  color: #bababa;
+  font-size: 0.8rem;
+}
+
+footer .container .about {
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+footer .container .about h3 {
+  color: #bababa;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+footer .container .about ul.cont {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .about ul.cont li {
+  height: 30px;
+}
+footer .container .about ul.cont li a {
+  color: #bababa;
+  font-size: 0.8rem;
+}
+
+footer .container #contact {
+  padding: 40px 80px;
+  padding-right: 0;
+}
+footer .container #contact h3 {
+  color: #bababa;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+footer .container #contact .text {
+  color: #bababa;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+footer .container #contact .btn.contact {
+  background-color: var(--main-color);
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 25px 110px;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  width: fit-content;
+  border: 2px solid var(--main-color);
+}
+footer .container #contact .btn.contact:hover {
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+}
+footer .container #contact .btn.contact a {
+  color: var(--secondry-color);
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 90px;
+}
+footer .container #contact .btn.contact:hover a {
+  color: #bababa;
+}
+footer .container #contact ul.social {
+  display: flex;
+}
+footer .container #contact ul.social li:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (max-width: 992px) {
+  footer .container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer .container .links {
+    width: 155px;
+  }
+  footer .container .about {
+    width: 95px;
+  }
+  footer .container #contact {
+    padding: 40px 0px;
+  }
+
+  footer .container #contact .btn.contact {
+    height: 30px;
+    padding: 25px 110px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+  }
+  footer .container #contact .btn.contact a {
+    min-width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    text-align: center;
+  }
+
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  footer .container .intro p:first-of-type {
+    width: auto;
+  }
+
+  footer .container .links {
+    width: 100%;
+    padding: 40px 00px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  footer .container .about {
+    width: 100%;
+    padding: 40px 00px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  footer .container #contact {
+    padding: 40px 00px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  footer .container #contact ul.social {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /* end footer */
