@@ -1499,7 +1499,7 @@ footer .container .intro p {
   font-size: 0.8rem;
 }
 footer .container .intro p:first-of-type {
-  width: 375px;
+  max-width: 375px;
 }
 
 footer .container .intro p:nth-of-type(2) span {
@@ -1608,8 +1608,25 @@ footer .container #contact ul.social li:not(:last-child) {
 }
 
 @media (max-width: 1200px) {
+  footer .container .intro {
+    padding: 40px 5px;
+    padding-left: 0;
+  }
+  footer .container .links {
+    padding: 40px 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  footer .container .about {
+    padding: 40px 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
   footer .container #contact {
-    padding: 40px 30px;
+    padding: 40px 10px;
     padding-right: 0;
   }
 }
@@ -1656,7 +1673,7 @@ footer .container #contact ul.social li:not(:last-child) {
     align-content: center;
   }
   footer .container .intro p:first-of-type {
-    width: auto;
+    max-width: none;
   }
 
   footer .container .links {
@@ -1688,4 +1705,5 @@ footer .container #contact ul.social li:not(:last-child) {
     justify-content: center;
   }
 }
+
 /* end footer */
