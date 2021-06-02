@@ -1607,6 +1607,13 @@ footer .container #contact ul.social li:not(:last-child) {
   margin-right: 20px;
 }
 
+@media (max-width: 1200px) {
+  footer .container #contact {
+    padding: 40px 30px;
+    padding-right: 0;
+  }
+}
+
 @media (max-width: 992px) {
   footer .container {
     display: grid;
@@ -1681,5 +1688,4 @@ footer .container #contact ul.social li:not(:last-child) {
     justify-content: center;
   }
 }
-
 /* end footer */
