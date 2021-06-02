@@ -1634,18 +1634,25 @@ footer .container #contact ul.social li:not(:last-child) {
 @media (max-width: 992px) {
   footer .container {
     display: grid;
+    grid-template-columns: 1fr 0.75fr 1fr 0.75fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "intro intro intro links" "about contact contact contact";
   }
-
+  footer .container .intro {
+    grid-area: intro;
+  }
   footer .container .links {
-    width: 155px;
+    /* width: 155px; */
+    grid-area: links;
   }
   footer .container .about {
-    width: 95px;
+    /* width: 95px; */
+    grid-area: about;
   }
   footer .container #contact {
     padding: 40px 0px;
+    grid-area: contact;
+    padding-left: 40px;
   }
 
   footer .container #contact .btn.contact {
